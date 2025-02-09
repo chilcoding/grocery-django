@@ -1,0 +1,82 @@
+{% extends 'bazaar/adminbase.html' %}
+{% block content %}
+{% load static %}
+
+<!-- main content -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+  <style>
+    table {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    a:link {
+      text-decoration: none;
+    }
+
+    .header-title {
+      text-align: center;
+      color: red;
+      font-family: "Comic Sans MS";
+      font-size: 3rem;
+    }
+
+    .no-order {
+      text-align: center;
+      color: blue;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="container mt-5">
+    {% if orders %}
+    <h4 class="header-title">Order Received</h4>
+
+    <table class="table table-bordered">
+      <thead class="thead-light">
+        <tr>
+          <th scope="col">Customer</th>
+          <th scope="col">Mobile</th>
+          <th scope="col">Address</th>
+          <th scope="col">Product</th>
+          <th scope="col">Price</th>
+          <th scope="col">Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for m in orders %}
+        <tr>
+          <td>{{ m.customername }}</td>
+          <td>{{ m.mobile }}</td>
+          <td>{{ m.address }}</td>
+          <td>{{ m.product }}</td>
+          <td>{{ m.price }}</td>
+          <td>{{ m.date }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+
+    {% else %}
+    <h3 class="no-order">No Order Received</h3>
+    {% endif %}
+  </div>
+</body>
+
+</html>
+
+<!-- end main content -->
+{% endblock content %}

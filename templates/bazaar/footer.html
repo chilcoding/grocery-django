@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta content="Shop online for fresh vegetables, fruits, and groceries and get your order delivered at your doorstep. Enjoy instant delivery with Hello Kirana, This is a complete solution of an online grocery and ecommerce website." name="description">
+  <link rel="icon" href="{% static 'images/logo.png' %}" type="image/x-icon">
+
+  <style>
+    /*---------------------------------------
+    General body and footer setup
+    -----------------------------------------*/
+    html, body {
+      height: 100%;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+    }
+
+    footer {
+      padding: 20px 0;
+      background-color: #343a40;
+      color: #9a8080;
+      margin-top: auto;
+      text-align: center;
+      font-size: 14px;
+      border-top: 1px solid #444;
+    }
+
+    footer a {
+      text-decoration: none;
+      color: #9a8080;
+      transition: color 0.3s ease;
+    }
+
+    footer a:hover {
+      color: #f8f9fa;
+    }
+
+    footer p {
+      margin: 10px 0;
+    }
+
+    .footer-copyright {
+      color: #ffffff;
+      font-size: 16px;
+      margin-top: 10px;
+    }
+
+    .footer-copyright .fa-heart {
+      color: red;
+    }
+
+    /*---------------------------------------
+    Responsive design
+    -----------------------------------------*/
+    @media (max-width: 768px) {
+      footer {
+        padding: 15px 0;
+        font-size: 12px;
+      }
+
+      .footer-copyright {
+        font-size: 14px;
+      }
+    }
+
+    /* For smaller mobile screens */
+    @media (max-width: 480px) {
+      footer {
+        padding: 10px 0;
+      }
+
+      .footer-copyright {
+        font-size: 12px;
+      }
+
+      footer p {
+        font-size: 13px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Content of your page goes here -->
+
+  <footer>
+    <div class="container">
+      <p>
+        <a href="/terms-and-condition-of-homebazar">Terms & conditions</a> |
+        <a href="/privacy-policy-of-homebazar">Privacy Policy</a> |
+        <a href="/aboutus-homebazar">About Us</a>
+      </p>
+      <div class="footer-copyright">
+        <p>Copyright &copy; Online Grocery Shop 2023 <br>
+          Made with &nbsp;<i class="fa fa-heart heart"></i> &nbsp; By Hemanta Hembram
+        </p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
